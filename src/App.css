@@ -1,0 +1,81 @@
+
+:root{
+  --brand-600:#365de0;
+  --brand-700:#2c4bb5;
+  --brand-900:#1b2c66;
+  --bg:#f7f8fb;
+  --text:#1f2937;        /* gray-800 */
+  --muted:#4b5563;       /* gray-600 */
+  --border:#e5e7eb;      /* gray-200 */
+  --white:#ffffff;
+  --gradient: linear-gradient(135deg, #4b74f8 0%, #2c4bb5 50%, #1b2c66 100%);
+  --radius:14px;
+  --shadow: 0 10px 25px rgba(27,44,102,0.15);
+  --soft-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Base */
+*{ box-sizing:border-box }
+html,body{ margin:0; padding:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; background:var(--bg); color:var(--text); }
+a{ color:inherit; text-decoration:none }
+img{ display:block; max-width:100% }
+
+/* Layout */
+.container{ max-width:1100px; margin:0 auto; padding:0 20px }
+.section{ padding:64px 0 }
+.section__title{ font-size:28px; font-weight:600; margin-bottom:24px }
+
+/* Navbar */
+.nav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(6px); background-color:rgba(255,255,255,0.75); border-bottom:1px solid var(--border) }
+.nav__inner{ display:flex; justify-content:space-between; align-items:center; padding:12px 0 }
+.nav__brand{ font-weight:700; color:var(--brand-700) }
+.brand-accent{ color:#111827 }
+.nav__links{ display:flex; gap:14px; align-items:center }
+.nav__links a{ font-size:14px; font-weight:500; color:#374151 }
+.icon-btn{ display:inline-flex; align-items:center; justify-content:center; padding:8px; border-radius:8px }
+.icon-btn:hover{ background:#f3f4f6 }
+
+/* Hero */
+.hero{ position:relative; padding:64px 0; }
+.hero__grid{ display:grid; grid-template-columns:1fr; gap:28px }
+@media(min-width:768px){ .hero__grid{ grid-template-columns:1.1fr 0.9fr } }
+
+.hero__title{ font-size:34px; font-weight:800; margin:0 0 6px }
+.hero__role{ color:var(--brand-700); font-weight:600 }
+.hero__summary{ margin-top:14px; color:var(--muted); line-height:1.7 }
+
+.hero__actions{ margin-top:20px; display:flex; gap:12px; flex-wrap:wrap }
+.btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px; font-weight:600; border:1px solid transparent; transition:all .2s ease }
+.btn--primary{ background:var(--brand-600); color:var(--white) }
+.btn--primary:hover{ background:var(--brand-700) }
+.btn--secondary{ background:var(--white); color:#111827; border-color:var(--border) }
+.btn--secondary:hover{ background:#f3f4f6 }
+
+.hero__photoWrap{ position:relative; }
+.hero__photoRing{ width:220px; height:220px; border-radius:50%; overflow:hidden; border:5px solid #4b74f8; box-shadow:var(--shadow); margin:0 auto }
+.hero__photo{ width:100%; height:100%; object-fit:cover }
+.hero__glow{ position:absolute; inset:-40px; filter:blur(60px); opacity:.3; background:var(--gradient); z-index:-1 }
+
+/* Cards & Grid */
+.grid{ display:grid; grid-template-columns:1fr; gap:18px }
+@media(min-width:640px){ .grid{ grid-template-columns:repeat(2,1fr) } }
+@media(min-width:1024px){ .grid{ grid-template-columns:repeat(3,1fr) } }
+
+.card{ background:var(--white); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:var(--soft-shadow) }
+.card--soft{ padding:20px }
+.card__image{ width:100%; height:170px; object-fit:cover }
+.card__body{ padding:16px }
+.card__title{ font-size:18px; font-weight:700; margin:0 0 8px }
+.card__desc{ color:var(--muted); font-size:14px; line-height:1.6 }
+.card__tags{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap }
+.tag{ font-size:12px; font-weight:600; color:var(--brand-700); background:#eef2ff; padding:4px 8px; border-radius:999px }
+.card__actions{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap }
+
+/* About & Contact */
+.text{ color:var(--muted); line-height:1.7 }
+.actions{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap }
+
+/* Footer */
+.footer{ border-top:1px solid var(--border); padding:20px 0; margin-top:16px }
+.footer__inner{ display:flex; flex-direction:column; gap:8px; font-size:14px; color:#6b7280 }
+@media(min-width:640px){ .footer__inner{ flex-direction:row; justify-content:space-between; align-items:center } }
