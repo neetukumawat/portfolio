@@ -4,7 +4,7 @@ export const site = {
     role: 'CDOE Student (BCA - 2024)',
     location: 'Jaipur, Rajasthan',
     email: 'neetuu226@gmail.com',
-    github: 'https://github.com/your-github',
+    github: 'https://github.com/neetukumawat',
     linkedin: 'https://www.linkedin.com/in/neetu-kumawat/',
     cvUrl: '/assets/Neetu-Kumawat-CV.pdf',
     hero: {
